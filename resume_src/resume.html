@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kalyani Gajanan Nemade — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+@page {
+  size: A4;
+  margin: 0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.55;
+  color: #1a1a2e;
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ── LAYOUT ── */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 62mm 1fr;
+}
+
+/* ── LEFT SIDEBAR ── */
+.sidebar {
+  background: #0f2044;
+  color: #e8edf8;
+  padding: 28pt 16pt 28pt 18pt;
+  min-height: 297mm;
+}
+.sidebar-photo { text-align: center; margin-bottom: 18pt; }
+.sidebar-photo img {
+  width: 72pt; height: 72pt;
+  border-radius: 50%;
+  object-fit: cover; object-position: top center;
+  border: 3pt solid rgba(255,255,255,.25);
+}
+.s-name {
+  font-size: 13pt; font-weight: 700;
+  line-height: 1.2; text-align: center;
+  margin-bottom: 4pt; color: #fff;
+}
+.s-role {
+  font-size: 7.5pt; font-weight: 500;
+  text-align: center; color: #7eb3f5;
+  letter-spacing: .08em; text-transform: uppercase;
+  margin-bottom: 16pt;
+}
+.s-divider { height: 1px; background: rgba(255,255,255,.12); margin: 12pt 0; }
+.s-section { margin-bottom: 14pt; }
+.s-sec-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 6.5pt; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: #7eb3f5; margin-bottom: 8pt;
+}
+.contact-item {
+  display: flex; align-items: flex-start; gap: 7pt;
+  margin-bottom: 5pt; font-size: 8pt; color: #c8d8f4;
+  line-height: 1.4; word-break: break-all;
+}
+.contact-item .ci {
+  width: 14pt; height: 14pt; border-radius: 4pt;
+  background: rgba(126,179,245,.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8pt; flex-shrink: 0; margin-top: 0;
+}
+.skill-pill {
+  display: inline-block;
+  background: rgba(126,179,245,.15);
+  border: 1px solid rgba(126,179,245,.2);
+  color: #c8d8f4; font-size: 7pt;
+  padding: 2pt 8pt; border-radius: 20pt;
+  margin: 2pt 2pt 2pt 0;
+}
+.skill-bar-wrap { margin-bottom: 6pt; }
+.skill-bar-name { font-size: 7.5pt; color: #c8d8f4; margin-bottom: 2pt; }
+.skill-track { height: 4pt; background: rgba(255,255,255,.1); border-radius: 2pt; overflow: hidden; }
+.skill-fill { height: 100%; border-radius: 2pt; background: linear-gradient(90deg,#7eb3f5,#4fc3f7); }
+.cert-item { margin-bottom: 6pt; }
+.cert-name { font-size: 7.5pt; color: #e8edf8; font-weight: 500; line-height: 1.3; }
+.cert-org { font-size: 6.8pt; color: #7eb3f5; }
+
+/* ── MAIN CONTENT ── */
+.main {
+  background: #fff;
+  padding: 24pt 20pt 24pt 20pt;
+  min-height: 297mm;
+}
+.main-header { margin-bottom: 14pt; padding-bottom: 12pt; border-bottom: 2pt solid #0f2044; }
+.main-name { font-size: 22pt; font-weight: 700; color: #0f2044; letter-spacing: -.02em; line-height: 1; }
+.main-role { font-size: 9pt; color: #3b5bdb; font-weight: 500; letter-spacing: .04em; margin-top: 3pt; }
+.status-badge {
+  display: inline-block; margin-top: 6pt;
+  background: #eef8f2; border: 1px solid #4caf8a;
+  color: #2e7d57; font-size: 7pt; font-weight: 600;
+  padding: 2pt 9pt; border-radius: 20pt; letter-spacing: .05em;
+}
+.m-section { margin-bottom: 14pt; }
+.m-sec-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 7pt; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: #3b5bdb; margin-bottom: 8pt;
+  padding-bottom: 3pt; border-bottom: 1px solid #e8edf8;
+}
+/* Summary */
+.summary { font-size: 8.5pt; color: #3a4166; line-height: 1.6; }
+.summary strong { color: #0f2044; font-weight: 600; }
+/* Experience */
+.exp-item { margin-bottom: 10pt; }
+.exp-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.exp-role { font-size: 8.5pt; font-weight: 700; color: #0f2044; }
+.exp-date { font-family: 'Space Mono', monospace; font-size: 7pt; color: #6b74a0; white-space: nowrap; background: #f0f4ff; padding: 1pt 6pt; border-radius: 4pt; }
+.exp-company { font-size: 7.5pt; color: #3b5bdb; font-weight: 500; margin: 1pt 0 4pt; }
+.exp-bullets { list-style: none; }
+.exp-bullets li { font-size: 8pt; color: #3a4166; padding: 1.5pt 0 1.5pt 12pt; position: relative; line-height: 1.5; }
+.exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: #3b5bdb; font-size: 7pt; top: 3pt; }
+/* Projects */
+.proj-item { margin-bottom: 9pt; background: #f8f9ff; border-left: 2pt solid #3b5bdb; padding: 7pt 10pt; border-radius: 0 6pt 6pt 0; }
+.proj-name { font-size: 8.5pt; font-weight: 700; color: #0f2044; }
+.proj-badges { display: flex; flex-wrap: wrap; gap: 3pt; margin: 3pt 0; }
+.proj-badge { font-size: 6.5pt; color: #3b5bdb; background: #eef2ff; border: 1px solid rgba(59,91,219,.18); padding: 1pt 6pt; border-radius: 3pt; font-weight: 500; }
+.proj-desc { font-size: 7.8pt; color: #3a4166; line-height: 1.5; }
+.proj-metric { display: inline-block; background: #3b5bdb; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1.5pt 7pt; border-radius: 3pt; margin-top: 4pt; margin-right: 3pt; }
+.proj-metric.teal { background: #0ca678; }
+/* Education */
+.edu-item { margin-bottom: 8pt; }
+.edu-degree { font-size: 8.5pt; font-weight: 700; color: #0f2044; }
+.edu-inst { font-size: 7.5pt; color: #3b5bdb; font-weight: 500; margin: 1pt 0; }
+.edu-year { font-size: 7pt; color: #6b74a0; font-family: 'Space Mono', monospace; }
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; min-height: 297mm; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── SIDEBAR ── -->
+  <div class="sidebar">
+    <div class="sidebar-photo">
+      <img src="../kalyani.jpg" alt="Kalyani Nemade"/>
+    </div>
+    <div class="s-name">Kalyani Gajanan Nemade</div>
+    <div class="s-role">Python Backend Developer</div>
+    <div class="s-divider"></div>
+
+    <!-- Contact -->
+    <div class="s-section">
+      <div class="s-sec-title">Contact</div>
+      <div class="contact-item"><div class="ci">📍</div><span>Amravati, Maharashtra</span></div>
+      <div class="contact-item"><div class="ci">📞</div><span>+91-9021654318</span></div>
+      <div class="contact-item"><div class="ci">✉️</div><span>kalyani.nemade.work@gmail.com</span></div>
+      <div class="contact-item"><div class="ci">🔗</div><span>linkedin.com/in/kalyani-nemade-work</span></div>
+      <div class="contact-item"><div class="ci">💻</div><span>github.com/kalyaninemadework-pixel</span></div>
+      <div class="contact-item"><div class="ci">🌐</div><span>kalyaninemadework-pixel.github.io</span></div>
+    </div>
+    <div class="s-divider"></div>
+
+    <!-- Skills -->
+    <div class="s-section">
+      <div class="s-sec-title">Core Skills</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-name">Python</div>
+        <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-name">FastAPI</div>
+        <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-name">Django / DRF</div>
+        <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-name">PostgreSQL</div>
+        <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-name">Docker / AWS</div>
+        <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+    </div>
+    <div class="s-divider"></div>
+
+    <!-- Tech Stack -->
+    <div class="s-section">
+      <div class="s-sec-title">Tech Stack</div>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">FastAPI</span>
+      <span class="skill-pill">Django</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">Java</span>
+      <span class="skill-pill">Redis</span>
+      <span class="skill-pill">Docker</span>
+      <span class="skill-pill">AWS</span>
+      <span class="skill-pill">Linux</span>
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill">AsyncIO</span>
+      <span class="skill-pill">Microservices</span>
+      <span class="skill-pill">RBAC</span>
+      <span class="skill-pill">GenAI APIs</span>
+    </div>
+    <div class="s-divider"></div>
+
+    <!-- Certifications -->
+    <div class="s-section">
+      <div class="s-sec-title">Certifications</div>
+      <div class="cert-item"><div class="cert-name">Python Essentials 1 &amp; 2</div><div class="cert-org">Cisco / Python Institute · 2026</div></div>
+      <div class="cert-item"><div class="cert-name">Microsoft Achievements</div><div class="cert-org">Microsoft Education · 2026</div></div>
+      <div class="cert-item"><div class="cert-name">JPMorgan SWE Simulation</div><div class="cert-org">Forage · Sept 2025</div></div>
+      <div class="cert-item"><div class="cert-name">Walmart Adv. SWE Simulation</div><div class="cert-org">Forage · Jan 2026</div></div>
+      <div class="cert-item"><div class="cert-name">TCS SDLC Simulation</div><div class="cert-org">Tata Consultancy Services</div></div>
+      <div class="cert-item"><div class="cert-name">Java Programming</div><div class="cert-org">Great Learning Academy · 2024</div></div>
+    </div>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <div class="main">
+    <div class="main-header">
+      <div class="main-name">KALYANI GAJANAN NEMADE</div>
+      <div class="main-role">Python Backend Developer · AI Engineer · Microservices Architect</div>
+      <div class="status-badge">✓ Open to Work — Remote &amp; Hybrid</div>
+    </div>
+
+    <!-- Summary -->
+    <div class="m-section">
+      <div class="m-sec-title">Professional Summary</div>
+      <div class="summary">
+        Results-driven <strong>Python Backend Developer</strong> with expertise in <strong>Django, FastAPI and RESTful API design</strong>. Proven ability to architect high-concurrency, event-driven systems achieving <strong>35% throughput improvement</strong> and <strong>99.9% uptime</strong> under peak load. Experienced in microservices architecture, <strong>PostgreSQL optimisation, Docker containerisation</strong>, and Generative AI integrations. AWS Certified. Currently pursuing <strong>BCA (Software Engineering)</strong> from Sant Gadge Baba Amravati University (2026).
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="m-section">
+      <div class="m-sec-title">Professional Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-role">Python Development Trainee</div>
+          <div class="exp-date">Jun – Jul 2025</div>
+        </div>
+        <div class="exp-company">iBase Electrosoft LLP · Amravati</div>
+        <ul class="exp-bullets">
+          <li>Engineered optimised Django/FastAPI backend configurations under senior architect mentorship.</li>
+          <li>Debugged complex logical errors across multi-module Python systems in agile sprint cycles.</li>
+          <li>Authored clean, maintainable Python code following OOP principles and REST design standards.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-role">Android &amp; IoT Developer Intern — 150 Hours</div>
+          <div class="exp-date">Jun 2025</div>
+        </div>
+        <div class="exp-company">iBase Electrosoft LLP · Amravati</div>
+        <ul class="exp-bullets">
+          <li>Integrated multi-tier architectures combining Android frontend with IoT hardware backends.</li>
+          <li>Delivered end-to-end feature implementations across hardware and software layers.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-role">Advanced Software Engineering Simulation</div>
+          <div class="exp-date">Jan 2026</div>
+        </div>
+        <div class="exp-company">Walmart Global Tech (Forage)</div>
+        <ul class="exp-bullets">
+          <li>Architected enterprise-scale Python backends, optimising relational schemas for high-throughput data operations.</li>
+          <li>Applied advanced Data Structures to eliminate scaling bottlenecks in distributed backend systems.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-role">Software Engineering Simulation</div>
+          <div class="exp-date">Sept 2025</div>
+        </div>
+        <div class="exp-company">JPMorgan Chase &amp; Co. (Forage)</div>
+        <ul class="exp-bullets">
+          <li>Deployed real-time financial data feed backend components with live visualisation integration.</li>
+          <li>Resolved critical Python framework conflicts in a simulated trading platform environment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="m-section">
+      <div class="m-sec-title">Key Projects</div>
+
+      <div class="proj-item">
+        <div class="proj-name">⚡ High-Concurrency Real-Time Data Engine</div>
+        <div class="proj-badges">
+          <span class="proj-badge">FastAPI</span><span class="proj-badge">AsyncIO</span>
+          <span class="proj-badge">PostgreSQL</span><span class="proj-badge">Redis</span><span class="proj-badge">Docker</span>
+        </div>
+        <div class="proj-desc">Fully async, event-driven Python backend with non-blocking I/O, optimised DB connection pools (min=10, max=50), query batching and decoupled background worker queues.</div>
+        <span class="proj-metric">35% Throughput ↑</span>
+        <span class="proj-metric teal">Sub-10ms Latency</span>
+        <span class="proj-metric" style="background:#7048e8">99.9% Uptime</span>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-name">🛒 Microservices E-Commerce Ecosystem</div>
+        <div class="proj-badges">
+          <span class="proj-badge">Django</span><span class="proj-badge">FastAPI</span>
+          <span class="proj-badge">PostgreSQL</span><span class="proj-badge">Nginx</span><span class="proj-badge">RBAC</span>
+        </div>
+        <div class="proj-desc">Decomposed monolithic Django app into 5 independently deployable services (Products, Inventory, Orders, Payments, Auth) with RBAC at Nginx gateway and idempotency keys on Payments.</div>
+        <span class="proj-metric">5 Microservices</span>
+        <span class="proj-metric teal">Zero Data Collisions</span>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="m-section">
+      <div class="m-sec-title">Education</div>
+      <div class="edu-item">
+        <div class="edu-degree">BCA — Bachelor of Computer Applications</div>
+        <div class="edu-inst">RDG Women's College · Sant Gadge Baba Amravati University</div>
+        <div class="edu-year">2023 – May 2026 · Specialisation: Software Engineering · GPA on track for distinction</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
