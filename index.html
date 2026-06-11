@@ -13,30 +13,30 @@
    DESIGN TOKENS — LIGHT & DARK
 ══════════════════════════════════════ */
 :root{
-  --bg:#f5f7ff;
+  --bg:#fafcff;
   --bg2:#ffffff;
-  --bg3:#eef1fb;
-  --bg4:#e4e8f8;
-  --border:#dde2f5;
-  --border2:#c8d0ef;
-  --text:#0f1630;
-  --text2:#3a4166;
-  --muted:#6b74a0;
-  --blue:#3b5bdb;
-  --blue-lt:#eef2ff;
-  --blue-glow:rgba(59,91,219,.18);
-  --teal:#0ca678;
-  --teal-lt:#e6fbf5;
-  --teal-glow:rgba(12,166,120,.15);
-  --gold:#e67700;
-  --gold-lt:#fff8e6;
-  --gold-glow:rgba(230,119,0,.14);
-  --red:#e03131;
-  --purple:#7048e8;
-  --purple-lt:#f3f0ff;
-  --shadow:0 4px 24px rgba(59,91,219,.08);
-  --shadow-lg:0 12px 48px rgba(59,91,219,.12);
-  --shadow-xl:0 24px 80px rgba(59,91,219,.16);
+  --bg3:#f4f7fe;
+  --bg4:#ebf1fa;
+  --border:#e2e8f0;
+  --border2:#cbd5e1;
+  --text:#0f172a;
+  --text2:#475569;
+  --muted:#64748b;
+  --blue:#2563eb;
+  --blue-lt:#eff6ff;
+  --blue-glow:rgba(37,99,235,.2);
+  --teal:#0d9488;
+  --teal-lt:#f0fdfa;
+  --teal-glow:rgba(13,148,136,.15);
+  --gold:#d97706;
+  --gold-lt:#fffbeb;
+  --gold-glow:rgba(217,119,6,.15);
+  --red:#dc2626;
+  --purple:#7c3aed;
+  --purple-lt:#f5f3ff;
+  --shadow:0 10px 30px -10px rgba(0,0,0,.08);
+  --shadow-lg:0 20px 40px -15px rgba(0,0,0,.12);
+  --shadow-xl:0 30px 60px -20px rgba(0,0,0,.15);
   --radius:16px;
   --radius-sm:10px;
   --font-mono:'Space Mono',monospace;
@@ -297,10 +297,11 @@ section{padding:90px 5vw}
 .proj-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
   padding:28px;position:relative;overflow:hidden;
-  transition:all .35s cubic-bezier(.22,1,.36,1);
+  transition:all .4s cubic-bezier(.22,1,.36,1);
   display:flex;flex-direction:column;
   box-shadow:var(--shadow);
   transform-style:preserve-3d;
+  cursor:pointer;
 }
 .proj-card:hover{transform:translateY(-8px) rotateX(2deg) rotateY(-2deg);box-shadow:var(--shadow-xl)}
 .proj-card.blue-card:hover{border-color:rgba(59,91,219,.35)}
@@ -420,7 +421,7 @@ section{padding:90px 5vw}
 /* ══════════════════════════════════════ EDUCATION */
 #education{background:var(--bg2)}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.edu-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden;transition:all .3s;box-shadow:var(--shadow)}
+.edu-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden;transition:all .3s;box-shadow:var(--shadow);cursor:pointer;}
 .edu-card:hover{border-color:var(--blue);box-shadow:var(--shadow-lg)}
 .edu-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}
 .edu-degree{font-family:var(--font-head);font-weight:700;font-size:1rem;margin-bottom:5px;color:var(--text)}
@@ -535,7 +536,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
     <div class="hero-inner">
       <div class="hero-tag"><div class="pulse-dot"></div><span id="heroTagText"></span></div>
       <h1 class="hero-name">Kalyani<br><span class="line2">Nemade</span><span class="dot">.</span></h1>
-      <p class="hero-role">// <span>Python Backend Developer</span> · AI Engineer · Microservices Architect</p>
+      <p class="hero-role">// <span>Python Full Stack Developer</span> · AI Engineer · Microservices Architect</p>
       <p class="hero-sub">Building high-concurrency, event-driven backend systems that scale reliably — with FastAPI, Django, PostgreSQL and AWS.</p>
       <div class="hero-metrics">
         <div class="metric"><div class="metric-val">35%</div><div class="metric-label">throughput ↑</div></div>
@@ -564,7 +565,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
   <h2 class="sec-title">Who I <em>Am</em></h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>I'm a <strong>results-driven Python Backend Developer</strong> with deep expertise in Django, FastAPI, and RESTful API design — specialising in backend systems that stay stable at scale.</p>
+      <p>I'm a <strong>results-driven Python Full Stack Developer</strong> with deep expertise in Django, FastAPI, and RESTful API design — specialising in backend systems that stay stable at scale.</p>
       <p>I architect <strong>high-concurrency, event-driven systems</strong> using async paradigms, optimised DB connection pooling, and Redis caching layers — delivering 35% throughput gains and sub-10ms API responses.</p>
       <p>Currently completing my <strong>BCA (Software Engineering)</strong> from Sant Gadge Baba Amravati University while building production-ready systems in parallel.</p>
       <div class="about-badges">
@@ -644,7 +645,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
       <div class="tl-dot"></div>
       <div class="tl-card">
         <div class="tl-top">
-          <div class="tl-company">Base Electrosoft LLP</div>
+          <div class="tl-company">iBase Electrosoft LLP</div>
           <div class="tl-date">Jun – Jul 2025</div>
         </div>
         <div class="tl-role">Python Development Trainee</div>
@@ -659,7 +660,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
       <div class="tl-dot"></div>
       <div class="tl-card">
         <div class="tl-top">
-          <div class="tl-company">Base Electrosoft LLP<span>150 Hours</span></div>
+          <div class="tl-company">iBase Electrosoft LLP<span>150 Hours</span></div>
           <div class="tl-date">Jun 2025</div>
         </div>
         <div class="tl-role">Android &amp; IoT Developer Intern</div>
@@ -758,17 +759,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
     </div>
 
     <!-- Future Projects -->
-    <div class="proj-card gold-card reveal">
+    <div class="proj-card gold-card reveal" onclick="window.open('https://github.com/kalyaninemadework-pixel/kalyra-ai', '_blank')">
       <div class="proj-icon">🤖</div>
-      <span class="proj-status status-wip">◐ IN PROGRESS</span>
-      <h3 class="proj-title">AI Chatbot Backend — GenAI API</h3>
-      <p class="proj-desc">FastAPI-powered chatbot backend integrating OpenAI / Gemini APIs with streaming responses, conversation memory using Redis, rate limiting, and multi-user session management. Optimised for low-latency AI inference at scale.</p>
+      <span class="proj-status status-live" style="background:var(--gold-lt);color:var(--gold);border-color:rgba(217,119,6,.25);">● LIVE</span>
+      <h3 class="proj-title">Kalyra AI Assistant</h3>
+      <p class="proj-desc">An intelligent, conversational AI assistant with a modern web interface. Integrates Gemini API for dynamic responses and context awareness, served via Python backend. Designed with premium glassmorphism UI.</p>
       <div class="proj-tags">
-        <span class="proj-tag gold">FastAPI</span><span class="proj-tag gold">OpenAI API</span>
-        <span class="proj-tag gold">Redis</span><span class="proj-tag gold">WebSockets</span>
-        <span class="proj-tag gold">Docker</span>
+        <span class="proj-tag gold">Python</span><span class="proj-tag gold">Gemini API</span>
+        <span class="proj-tag gold">Vanilla JS</span><span class="proj-tag gold">CSS3</span>
       </div>
-      <div class="future-label">🗓️ Expected: Aug 2026</div>
+      <a href="https://github.com/kalyaninemadework-pixel/kalyra-ai" target="_blank" class="proj-link" style="margin-top:auto; padding-top:14px; border-top:1px solid var(--border);">↗ View on GitHub</a>
     </div>
 
     <div class="proj-card purple-card reveal">
@@ -810,7 +810,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
     </div>
     <div class="terminal-body" id="termBody">
       <div class="t-line"><span class="t-prompt">kalyani@portfolio:~$</span><span class="t-cmd">whoami</span></div>
-      <div class="t-out">→ <span class="hi">Kalyani Nemade</span> — Python Backend Developer, Pune 🇮🇳</div>
+      <div class="t-out">→ <span class="hi">Kalyani Nemade</span> — Python Full Stack Developer, Pune 🇮🇳</div>
       <div class="t-out">→ Open to work · <span class="hi2">kalyani.nemade.work@gmail.com</span></div>
       <br>
       <div class="t-line"><span class="t-prompt">kalyani@portfolio:~$</span><span class="t-cmd">help</span></div>
@@ -839,82 +839,62 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
   <p class="cert-intro">Click any certificate card to view the full document. All credentials are officially issued and verifiable.</p>
   <div class="cert-grid">
 
-    <div class="cert-card reveal" onclick="openCert('assets/certs/python1.pdf','Python Essentials 1 — Cisco')">
-      <div class="cert-icon">🐍</div>
+    <div class="cert-card reveal" onclick="openCert('assets/certs/new_certificates.pdf','Generative AI Studio (Google Cloud)')">
+      <div class="cert-icon">☁️</div>
       <div class="cert-body">
-        <div class="cert-name">Python Essentials 1</div>
-        <div class="cert-org">Cisco Networking Academy / Python Institute</div>
-        <div class="cert-date">May 2026</div>
+        <div class="cert-name">Generative AI Studio</div>
+        <div class="cert-org">Google Cloud / Simplilearn</div>
+        <div class="cert-date">July 2025</div>
         <button class="cert-view-btn">📄 View Certificate</button>
       </div>
     </div>
 
-    <div class="cert-card reveal" onclick="openCert('assets/certs/python2.pdf','Python Essentials 2 — Cisco')">
-      <div class="cert-icon">🐍</div>
-      <div class="cert-body">
-        <div class="cert-name">Python Essentials 2</div>
-        <div class="cert-org">Cisco Networking Academy / Python Institute</div>
-        <div class="cert-date">May 2026</div>
-        <button class="cert-view-btn">📄 View Certificate</button>
-      </div>
-    </div>
-
-    <div class="cert-card reveal" onclick="openCert('assets/certs/microsoft.pdf','Microsoft Achievements Certificate')">
+    <div class="cert-card reveal" onclick="openCert('assets/certs/new_certificates.pdf','Prompt Engineering w/ Copilot')">
       <div class="cert-icon">🤖</div>
       <div class="cert-body">
-        <div class="cert-name">Microsoft Achievements</div>
-        <div class="cert-org">Microsoft Education</div>
-        <div class="cert-date">2026</div>
+        <div class="cert-name">Prompt Eng. w/ Copilot</div>
+        <div class="cert-org">Microsoft / Simplilearn</div>
+        <div class="cert-date">July 2025</div>
         <button class="cert-view-btn">📄 View Certificate</button>
       </div>
     </div>
 
-    <div class="cert-card reveal" onclick="openCert('assets/certs/jpmorgan.pdf','JPMorgan Chase Software Engineering Simulation')">
-      <div class="cert-icon">🏦</div>
-      <div class="cert-body">
-        <div class="cert-name">Software Engineering Simulation</div>
-        <div class="cert-org">JPMorgan Chase &amp; Co. (Forage)</div>
-        <div class="cert-date">Sept 2025</div>
-        <button class="cert-view-btn">📄 View Certificate</button>
-      </div>
-    </div>
-
-    <div class="cert-card reveal" onclick="openCert('assets/certs/tcs.pdf','TCS SDLC Simulation Certificate')">
+    <div class="cert-card reveal" onclick="openCert('assets/certs/new_certificates.pdf','GenAI Data Analytics (Tata)')">
       <div class="cert-icon">🏢</div>
       <div class="cert-body">
-        <div class="cert-name">Corporate SDLC Simulation</div>
-        <div class="cert-org">Tata Consultancy Services (TCS)</div>
-        <div class="cert-date">2026</div>
+        <div class="cert-name">GenAI Data Analytics</div>
+        <div class="cert-org">Tata Consultancy Services (Forage)</div>
+        <div class="cert-date">July 2025</div>
         <button class="cert-view-btn">📄 View Certificate</button>
       </div>
     </div>
 
-    <div class="cert-card reveal" onclick="openCert('assets/certs/intellipaat1.pdf','Intellipaat Certificate 1')">
-      <div class="cert-icon">🎓</div>
+    <div class="cert-card reveal" onclick="openCert('assets/certs/new_certificates.pdf','Solutions Architecture (AWS)')">
+      <div class="cert-icon">☁️</div>
       <div class="cert-body">
-        <div class="cert-name">Intellipaat Certification — I</div>
-        <div class="cert-org">Intellipaat Academy</div>
-        <div class="cert-date">2026</div>
+        <div class="cert-name">Solutions Architecture</div>
+        <div class="cert-org">AWS (Forage)</div>
+        <div class="cert-date">July 2025</div>
         <button class="cert-view-btn">📄 View Certificate</button>
       </div>
     </div>
 
-    <div class="cert-card reveal" onclick="openCert('assets/certs/intellipaat2.pdf','Intellipaat Certificate 2')">
-      <div class="cert-icon">🎓</div>
+    <div class="cert-card reveal" onclick="openCert('assets/certs/new_certificates.pdf','Technology Job Simulation')">
+      <div class="cert-icon">💻</div>
       <div class="cert-body">
-        <div class="cert-name">Intellipaat Certification — II</div>
-        <div class="cert-org">Intellipaat Academy</div>
-        <div class="cert-date">2026</div>
+        <div class="cert-name">Technology Simulation</div>
+        <div class="cert-org">Deloitte (Forage)</div>
+        <div class="cert-date">July 2025</div>
         <button class="cert-view-btn">📄 View Certificate</button>
       </div>
     </div>
 
-    <div class="cert-card reveal" onclick="openCert('assets/certs/java_gl.pdf','Java Programming — Great Learning')">
-      <div class="cert-icon">☕</div>
+    <div class="cert-card reveal" onclick="openCert('assets/certs/new_certificates.pdf','Cyber Job Simulation')">
+      <div class="cert-icon">🛡️</div>
       <div class="cert-body">
-        <div class="cert-name">Java Programming</div>
-        <div class="cert-org">Great Learning Academy</div>
-        <div class="cert-date">March 2024</div>
+        <div class="cert-name">Cyber Job Simulation</div>
+        <div class="cert-org">Deloitte (Forage)</div>
+        <div class="cert-date">July 2025</div>
         <button class="cert-view-btn">📄 View Certificate</button>
       </div>
     </div>
@@ -931,13 +911,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 5vw
       <div class="edu-degree">BCA — Bachelor of Computer Applications</div>
       <div class="edu-inst">RDG Women's College · Sant Gadge Baba Amravati University</div>
       <div class="edu-year">2023 — May 2026</div>
-      <div class="edu-spec">Specialisation: Software Engineering · GPA on track for distinction</div>
+      <div class="edu-spec">Specialization: Software Engineering<br><strong style="color:var(--blue); font-size:1.1em; display:inline-block; margin-top:8px;">✅ SGPA: 7.14</strong></div>
     </div>
     <div class="edu-card reveal" style="border-left-color:var(--teal)">
       <div class="edu-degree" style="color:var(--teal)">Final Year — Currently Pursuing</div>
       <div class="edu-inst" style="color:var(--teal)">Graduating May 2026</div>
-      <div class="edu-year">Building production projects alongside coursework</div>
-      <div class="edu-spec">Real-world backend engineering experience running in parallel with academic milestones — closing the gap between theory and production.</div>
+      <div class="edu-year">Graduated May 2026</div>
+      <div class="edu-spec">Successfully completed BCA with distinction, building robust Python production projects alongside academic milestones.</div>
     </div>
   </div>
 </section>
@@ -1094,7 +1074,7 @@ const commands={
 → <span class="hi">Cloud:</span> AWS · Docker · Linux · Git · CI/CD`,
   projects:`→ <span class="hi2">[LIVE]</span> High-Concurrency Real-Time Data Engine — <span class="hi">35% throughput ↑</span>
 → <span class="hi2">[LIVE]</span> Microservices E-Commerce Ecosystem — <span class="hi">5 services, zero collisions</span>
-→ <span class="hi3">[WIP]</span>  AI Chatbot Backend — FastAPI + OpenAI
+→ <span class="hi2">[LIVE]</span> Kalyra AI Assistant — <span class="hi">Python + Gemini API</span>
 → <span class="hi3">[SOON]</span> KN Notes App — Flutter + Play Store`,
   certs:`→ Python Essentials 1 &amp; 2 — <span class="hi">Cisco / Python Institute</span>
 → Microsoft Achievements — <span class="hi">Microsoft Education</span>
@@ -1116,7 +1096,7 @@ const commands={
 → 📧 Send offer to: <span class="hi2">kalyani.nemade.work@gmail.com</span>`,
   resume:`→ Downloading resume...
 → <span class="hi2">✅ kalyani_nemade_resume.pdf</span>`,
-  whoami:`→ <span class="hi">Kalyani Nemade</span> — Python Backend Developer
+  whoami:`→ <span class="hi">Kalyani Nemade</span> — Python Full Stack Developer
 → Location: Pune, Maharashtra 🇮🇳
 → Status: <span class="hi2">Open to Work ✓</span>
 → Stack: FastAPI · Django · PostgreSQL · Redis · Docker · AWS`,
